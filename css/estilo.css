@@ -1,0 +1,139 @@
+:root {
+  --bg: #f1f5f9;
+  --white: #fff;
+  --blue: #2563eb;
+  --blue-dark: #1e40af;
+  --text: #0f172a;
+  --muted: #6b7280;
+  --error: #dc2626;
+  --radius: 12px;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #e0e7ff 0%, var(--bg) 100%);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+}
+
+.login-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input {
+  padding: 12px 14px;
+  font-size: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius);
+  outline: none;
+}
+
+input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.password-wrapper input {
+  flex: 1;
+  padding-right: 40px;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.error-msg {
+  color: var(--error);
+  font-size: 0.9rem;
+  height: 16px;
+  text-align: center;
+}
+
+.btn-login {
+  background: var(--blue);
+  color: var(--white);
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-login:hover {
+  background: var(--blue-dark);
+}
+
+.signup-text {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.signup-text a {
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 24px 18px;
+  }
+  .login-card h1 {
+    font-size: 1.3rem;
+  }
+}
